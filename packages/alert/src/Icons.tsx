@@ -10,7 +10,7 @@ export const Icons = ({
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
+          fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
           className="w-6 h-6 mx-2"
@@ -28,7 +28,7 @@ export const Icons = ({
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
+          fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
           className="w-6 h-6 mx-2"
@@ -46,7 +46,7 @@ export const Icons = ({
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
+          fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
           className="w-6 h-6 mx-2 stroke-current"
@@ -64,7 +64,7 @@ export const Icons = ({
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
+          fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
           className="w-6 h-6 mx-2 stroke-current"
