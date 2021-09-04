@@ -1,0 +1,17 @@
+{
+  "name": "next-recall",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-nisaju:Nisaju/next-recall"
+  },
+  "keywords": [],
+  "author": "Anjianto",
+  "license": "MIT"
+}
