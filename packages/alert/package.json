@@ -1,6 +1,6 @@
 {
   "name": "@next-recall/alert",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/alert.esm.js",
@@ -18,7 +18,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build && yarn tailwindcss -i src/main.css -o dist/index.css -m",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
