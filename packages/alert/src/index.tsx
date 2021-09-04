@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icons } from './Icons';
 
-interface Props {
+export interface Props {
   variant?: 'info' | 'success' | 'warning' | 'error';
   icon?: React.ComponentType;
   children: React.ReactNode | string;
@@ -16,7 +16,7 @@ const cn = (...classes: (string | undefined)[]) => {
 };
 
 export const Alert: React.FC<Props> = ({
-  variant,
+  variant = 'info',
   icon: Icon,
   children,
   labelProps,
