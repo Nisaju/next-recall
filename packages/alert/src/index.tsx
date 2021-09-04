@@ -21,8 +21,24 @@ export const Alert: React.FC<Props> = ({
   children,
   labelProps,
 }) => {
+  let currentVariant = 'alert-info';
+  switch (variant) {
+    case 'success':
+      currentVariant = 'alert-success';
+      break;
+    case 'warning':
+      currentVariant = 'alert-warning';
+      break;
+    case 'error':
+      currentVariant = 'alert-error';
+      break;
+    default:
+      currentVariant = 'alert-info';
+      break;
+  }
+
   return (
-    <div className={cn('alert', variant)}>
+    <div className={cn('alert', currentVariant)}>
       <div className="flex-1">
         {Icon ? <Icon /> : <Icons variant={variant} />}
         <label {...labelProps}>{children}</label>
