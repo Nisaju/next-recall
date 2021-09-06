@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* This is to prevent loop .alert > :not([hidden]) ~ :not([hidden]) > :not([hidden]) ~ :not([hidden])  */
+  @media (min-width: 768px) {
+    .alert > :not([hidden]) ~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0px * var(--tw-space-y-reverse));
+    }
+  }
+
+  .alert {
+    @apply flex flex-col md:flex-row items-center justify-between
+    bg-coolGray-50 p-4;
+    border-radius: var(--nr-rounded-box, 1rem);
+
+    /* This is to prevent loop .alert > :not([hidden]) ~ :not([hidden]) > :not([hidden]) ~ :not([hidden])  */
+    > :not([hidden]) ~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+    }
+
+    > * {
+      @apply flex;
+    }
+
+    &-sm {
+      @apply p-2;
+    }
+    &-info {
+      @apply bg-info dark:bg-dark-info bg-opacity-10 text-info;
+    }
+    &-success {
+      @apply bg-success dark:bg-dark-success bg-opacity-10 text-success;
+    }
+    &-warning {
+      @apply bg-warning/10 dark:bg-dark-warning/10 text-warning;
+    }
+
+    &-error {
+      @apply bg-error dark:bg-dark-error bg-opacity-10 text-error;
+    }
+  }
+}
