@@ -9,6 +9,7 @@ export interface Props {
     React.LabelHTMLAttributes<HTMLLabelElement>,
     HTMLLabelElement
   >;
+  isSmall?: boolean;
 }
 
 const cn = (...classes: (string | undefined)[]) => {
@@ -19,6 +20,7 @@ export const Alert: React.FC<Props> = ({
   variant = 'info',
   icon: Icon,
   children,
+  isSmall,
   labelProps,
 }) => {
   let currentVariant = 'alert-info';
@@ -38,7 +40,7 @@ export const Alert: React.FC<Props> = ({
   }
 
   return (
-    <div className={cn('alert', currentVariant)}>
+    <div className={cn('alert', currentVariant, isSmall ? 'alert-sm' : '')}>
       <div className="flex-1">
         {Icon ? <Icon /> : <Icons variant={variant} />}
         <label {...labelProps}>{children}</label>
